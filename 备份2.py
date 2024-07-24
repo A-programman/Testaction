@@ -49,4 +49,4 @@ def find_user(start,end):
                 print(requests.get(f'https://newcodemao.pythonanywhere.com/delete_user?phone={use["id"]}').text)
     print('运行报告：账号库总账号数量'+str(len(user_dict)))
 
-find_user(0,4900)
+find_user(4900,10000)
