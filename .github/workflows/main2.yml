@@ -1,8 +1,6 @@
 name: Hourly Trigger2
 
-on:
-  schedule:
-    - cron: '0 * * * *'  # 每小时的第0分钟执行
+on: [push]
 
 jobs:
   run-script:
