@@ -47,8 +47,11 @@ def find_user(start,end):
                 print('错误')
                 print(use["phone"])
                 print(requests.get(f'https://newcodemao.pythonanywhere.com/delete_user?phone={use["id"]}').text)
+            except requests.exceptions.ConnectionError as e:
+                print(str(e))
         except requests.exceptions.ConnectionError as e:
             print(str(e))
+        
     print('运行报告：账号库总账号数量'+str(len(user_dict)))
 
 find_user(4900,10000)
